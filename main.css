@@ -1,0 +1,311 @@
+.attribution {
+  position: relative;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  line-height: 1.5;
+}
+
+body {
+  margin: 0;
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+  box-sizing: border-box;
+}
+
+.bg-right {
+  position: fixed;
+  width: 450px;
+  height: 700px;
+  background-image: linear-gradient(
+    215deg,
+    hsl(293, 100%, 63%) -20%,
+    hsl(264, 100%, 61%) 95%
+  );
+  border-bottom-right-radius: 210px;
+  border-bottom-left-radius: 210px;
+  right: 75%;
+}
+
+.bg-left {
+  position: fixed;
+  width: 450px;
+  height: 700px;
+  background-color: hsl(270, 20%, 96%);
+  right: -10%;
+  bottom: 0;
+  border-top-right-radius: 210px;
+  border-top-left-radius: 210px;
+}
+
+.wraper {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: auto;
+}
+
+.container {
+  position: relative;
+  display: inline-grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "phone text";
+  align-items: center;
+  justify-items: center;
+}
+
+.phone {
+  grid-area: phone;
+  position: relative;
+  width: 280px;
+  height: 635px;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 1px 1px 20px 20px rgb(0 0 0 / 10%);
+  padding: 15px;
+  border-radius: 30px;
+  transform: scale(0.9);
+}
+
+.header::before {
+  position: absolute;
+  content: "";
+  width: 55%;
+  height: 20px;
+  background-color: hsl(0, 0%, 100%);
+  left: 23%;
+  top: -1px;
+  border-radius: 0 0 15px 15px;
+}
+
+.header {
+  position: relative;
+  height: 14%;
+  width: 100%;
+  background-image: linear-gradient(
+    to left,
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+  border-radius: 20px 20px 5px 5px;
+  box-shadow: 0 4px 10px 0px rgb(0 0 0 / 15%);
+}
+
+.header .back {
+  position: relative;
+  top: 33%;
+  left: 3%;
+}
+
+.header .avatar {
+  position: relative;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 2px hsl(0, 0%, 100%) solid;
+  top: 40%;
+  left: 2%;
+}
+
+.header .name {
+  display: inline-block;
+  position: relative;
+  top: 35%;
+  left: 5%;
+  color: hsl(0, 0%, 100%);
+  line-height: 18px;
+}
+
+.header span {
+  display: block;
+  color: hsl(0, 0%, 100%, 70%);
+  font-size: 0.7em;
+}
+
+.header .menu {
+  position: relative;
+  left: 25%;
+  top: 25%;
+  width: 15px;
+}
+
+.chat {
+  background-color: hsl(270, 20%, 96%);
+  padding: 10px;
+  border-radius: 0 0 20px 20px;
+}
+
+.chat > .chat-left {
+  background-color: hsl(274deg 40% 92%);
+  width: 140px;
+  padding: 10px;
+  font-size: 10px;
+  border-radius: 15px 15px 15px 5px;
+  color: hsl(276, 55%, 52%);
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.chat-right-img {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.chat-right-img img {
+  width: 50px;
+  border-radius: 10px;
+  margin-left: 5px;
+}
+
+.chat-right {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(271, 15%, 43%);
+  width: 140px;
+  padding: 10px;
+  border-radius: 15px 15px 5px 15px;
+  font-size: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 0;
+  margin-left: auto;
+  line-height: 1.5;
+  box-shadow: 0px 4px 10px 0px rgb(0 0 0 / 10%);
+}
+
+.chat-right:nth-of-type(5) {
+  width: fit-content;
+  margin-bottom: 20px;
+}
+
+.chat-left-price {
+  color: rgb(255, 255, 255);
+  font-size: 10px;
+  display: inline-flex;
+  width: 150px;
+  height: 40px;
+  background-image: linear-gradient(
+    to right,
+    rgb(233, 66, 255),
+    rgb(136, 56, 255)
+  );
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  border-radius: 10px 10px 10px 5px;
+  padding: 0px 15px;
+}
+
+.chat-left-price .time::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px hsl(289, 100%, 72%) solid;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.chat-left-price .time {
+  color: hsl(0, 0%, 100%, 80%);
+  display: flex;
+  align-items: center;
+}
+
+.chat-left-price .price {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.chat .footer {
+  width: 260px;
+  height: 40px;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.placholder {
+  margin-left: 20px;
+  font-size: 11px;
+  color: hsl(206, 6%, 79%);
+}
+
+.send {
+  background-color: hsl(271, 36%, 24%);
+  border-radius: 50%;
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  grid-area: text;
+}
+
+h2 {
+  font-size: 2.5em;
+  color: hsl(271, 36%, 24%);
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+span {
+  color: hsl(270, 7%, 64%);
+}
+
+@media (max-width: 800px) {
+  .bg-right {
+    bottom: 40%;
+    right: 70%;
+  }
+
+  .bg-left {
+    right: 0;
+    top: 45%;
+    left: 70%;
+  }
+
+  .wraper {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 10% auto auto 10%;
+  }
+
+  .container {
+    gap: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "."
+      "phone"
+      "phone"
+      "text";
+    align-items: start;
+  }
+
+  .text {
+    grid-area: text;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
